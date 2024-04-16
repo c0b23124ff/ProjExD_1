@@ -26,9 +26,9 @@ def main():
         if key_lst[pg.K_DOWN]:
             kk_rct.move_ip([0,1])
         if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip([1,0])
-        if key_lst[pg.K_LEFT]:
-            kk_rct.move_ip([-1,0])
+            kk_rct.move_ip([2,0])
+        #if key_lst[pg.K_LEFT]:
+            #kk_rct.move_ip([-1,0])
 
         x = tmr % 3200
         screen.blit(bg_img, [-x, 0])
@@ -39,7 +39,9 @@ def main():
 
         screen.blit(kk_img,kk_rct)
         pg.display.update()
-        tmr += 1        
+        tmr += 1 
+        kk_rct.move_ip([-1,0])
+       
         clock.tick(200)
         
         
